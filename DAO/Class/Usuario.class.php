@@ -114,6 +114,15 @@ class Usuario
         ));
     }
 
+    public function Delete()
+    {
+        // OBS: A prática mais correta é uma exlusão lógica (com um campo "Status" indicando se o registro é ativo ou não)
+        $sql = new Sql();
+        $sql->Query("DELETE FROM tb_usuarios WHERE idusuario = :ID", array(
+            ":ID" => $this->GetIdusuario()
+        ));
+    }
+
     public function SetData($data)
     {
         $this->SetIdusuario($data["idusuario"]);

@@ -25,10 +25,18 @@ require_once("config.php");
 
 //echo $aluno;
 
+//$usuario = new Usuario();
+
+//$usuario->GetById(6);
+
+//$usuario->Update("professor", "@professor");
+
+//echo $usuario;
+
 $usuario = new Usuario();
 
-$usuario->GetById(6);
+$usuario->GetById(1);
 
-$usuario->Update("professor", "@professor");
+$usuario->Delete();
 
-echo $usuario;
+
