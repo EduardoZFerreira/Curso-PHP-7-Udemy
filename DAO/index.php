@@ -20,7 +20,15 @@ require_once("config.php");
 
 //echo $usuario;
 
-$aluno = new Usuario("novoaluno", "@alunonovo");
-$aluno->Insert();
+//$aluno = new Usuario("novoaluno", "@alunonovo");
+//$aluno->Insert();
 
-echo $aluno;
+//echo $aluno;
+
+$usuario = new Usuario();
+
+$usuario->GetById(6);
+
+$usuario->Update("professor", "@professor");
+
+echo $usuario;
